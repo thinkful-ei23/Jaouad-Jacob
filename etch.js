@@ -1,13 +1,18 @@
 'use strict';
 // Add Event Listeners here:
 function hover() {
-  $('.cell').addClass('active');
+  $(this).addClass('active');
 }  
+function redrawGrid() {
+  $('button').on('click', function() {
+    createAndPlaceRows(8);
+  });
+}
 // When DOM is ready:
 $(() => {
   createAndPlaceRows(8);
-
-  $('.cell').hover(hover);
+  redrawGrid();
+  $('.cell').on('mouseover',hover);
   
 });
 
