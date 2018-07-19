@@ -12,8 +12,7 @@ function redrawGrid() {
 $(() => {
   createAndPlaceRows(8);
   redrawGrid();
-  $('.cell').on('mouseover',hover);
-  
+  $('.grid').on('mouseover', '.cell', hover);
 });
 
 // ===============================
