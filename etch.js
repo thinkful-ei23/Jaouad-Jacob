@@ -1,7 +1,11 @@
 'use strict';
 // Add Event Listeners here:
 function hover() {
-  $(this).addClass('active');
+  let colorChooser = ['#FF6B35', '#F7C59F', '#EFEFD0', '#004E89', '#1A659E'][Math.floor(Math.random()*5)];
+  $(this).css('background-color', function() {
+    return colorChooser;
+  });
+  // $(this).addClass('active');
 }  
 function redrawGrid() {
   $('button').on('click', function() {
